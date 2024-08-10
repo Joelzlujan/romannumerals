@@ -1,11 +1,14 @@
-package com.romannumerals.challenge.domain;
+package com.romannumerals.challenge.infraestructure.service;
 
 import com.romannumerals.challenge.application.exception.RomanNumeralException;
+import com.romannumerals.challenge.infraestructure.service.usecase.RomanNumeralConverterUseCase;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.TreeMap;
 
-public class RomanNumeralConverter {
+@Service
+public class RomanNumeralConverterUseCaseService implements RomanNumeralConverterUseCase {
     private static final TreeMap<Integer, String> arabicToRomanMap = new TreeMap<>();
     private static final Map<String, Integer> romanToArabicMap = new TreeMap<>();
 
@@ -24,10 +27,10 @@ public class RomanNumeralConverter {
         arabicToRomanMap.put(4, "IV");
         arabicToRomanMap.put(1, "I");
 
-        // Creo el mapa inverso
         arabicToRomanMap.forEach((key, value) -> romanToArabicMap.put(value, key));
     }
 
+    @Override
     public String toRoman(int number) {
         if (number <= 0 || number >= 4000) {
             throw new RomanNumeralException("Número fuera del rango permitido (1-3999)");
@@ -45,6 +48,7 @@ public class RomanNumeralConverter {
         return result.toString();
     }
 
+    @Override
     public int toArabic(String roman) {
         if (roman == null || roman.isEmpty()) {
             throw new RomanNumeralException("El valor romano no puede estar vacío");
@@ -72,4 +76,5 @@ public class RomanNumeralConverter {
 
         return result;
     }
+
 }

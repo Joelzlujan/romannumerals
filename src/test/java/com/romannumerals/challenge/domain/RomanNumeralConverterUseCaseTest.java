@@ -1,12 +1,14 @@
 package com.romannumerals.challenge.domain;
 
 import com.romannumerals.challenge.application.exception.RomanNumeralException;
+import com.romannumerals.challenge.infraestructure.service.RomanNumeralConverterUseCaseService;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-class RomanNumeralConverterTest {
-    private final RomanNumeralConverter converter = new RomanNumeralConverter();
+class RomanNumeralConverterUseCaseTest {
+    private final RomanNumeralConverterUseCaseService converter = new RomanNumeralConverterUseCaseService();
+
 
     @Test
     void testToRoman_ValidValues() {
