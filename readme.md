@@ -47,7 +47,7 @@ Este proyecto es una implementación de un servicio para convertir números ará
 ## Requisitos Previos
 
 - Java 21
-- Maven 3.8+ o Gradle 7.5+
+- Maven 3.8+.
 - Spring Boot 3.3.2
 
 ## Instrucciones de Ejecución
