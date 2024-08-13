@@ -1,8 +1,8 @@
-package com.romannumerals.challenge.infraestructure.service;
+package com.romannumerals.challenge.application.service;
 
 import com.romannumerals.challenge.domain.ArabicNumeral;
 import com.romannumerals.challenge.domain.RomanNumeral;
-import com.romannumerals.challenge.infraestructure.service.usecase.RomanNumeralConverterUseCase;
+import com.romannumerals.challenge.application.service.usecase.RomanNumeralConverterUseCase;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

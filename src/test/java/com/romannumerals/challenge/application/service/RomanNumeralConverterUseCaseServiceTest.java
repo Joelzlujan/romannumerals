@@ -1,6 +1,7 @@
-package com.romannumerals.challenge.infraestructure.service;
+package com.romannumerals.challenge.application.service;
 
 import com.romannumerals.challenge.application.exception.RomanNumeralException;
+import com.romannumerals.challenge.application.service.RomanNumeralConverterUseCaseService;
 import com.romannumerals.challenge.domain.ArabicNumeral;
 import com.romannumerals.challenge.domain.RomanNumeral;
 import org.junit.jupiter.api.Test;
